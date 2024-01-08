@@ -15,9 +15,6 @@ import { PipeNamePipe } from './pipes/pipe-name.pipe';
 import { TemperaturePipe } from './pipes/temperature.pipe';
 import { TemperatureTestComponent } from './pages/temperature-test/temperature-test.component';
 import { CardComponent } from './components/card/card.component';
-import { AddBookComponent } from './pages/add-book/add-book.component';
-import { UpdateBookComponent } from './pages/update-book/update-book.component';
-import { BooksService } from './shared/books.service';
 
 @NgModule({
   declarations: [
@@ -32,16 +29,14 @@ import { BooksService } from './shared/books.service';
     PipeNamePipe,
     TemperaturePipe,
     TemperatureTestComponent,
-    CardComponent,
-    AddBookComponent,
-    UpdateBookComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [BooksService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

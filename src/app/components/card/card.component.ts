@@ -2,7 +2,6 @@
 
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from 'src/app/models/book';
-import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-card',
@@ -24,23 +23,8 @@ export class CardComponent {
 //今回は、イベントエミッターを通じてインデックスを送信
   @Output() deleteFromChild = new EventEmitter<number>();
 
-  // dia 4
-  // deleteCard(){
-  //   this.deleteFromChild.emit(this.index);
-  // }
-  
-  // dia 4
-  // mandar id_book al padre "book.component.ts" para eliminar con id_book 
-  // deleteCard(){
-  //   this.deleteFromChild.emit(this.childCard.id_book);
-  // }
-
-  constructor(private booksService: BooksService){}
-
-  //CardComponentで削除されたときに、BooksComponentが更新されるようにする
-  deleteCard2(){
-    this.booksService.delete(this.childCard.id_book);
-    console.log('Book deleted');
-    this.deleteFromChild.emit();
+  deleteCard(){
+    this.deleteFromChild.emit(this.index);
   }
+  
 }
