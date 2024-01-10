@@ -5,6 +5,12 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { TemperatureTestComponent } from './pages/temperature-test/temperature-test.component';
+<<<<<<< HEAD
+=======
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginComponent } from './pages/login/login.component';
+>>>>>>> dia6
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
@@ -12,6 +18,14 @@ const routes: Routes = [
   {path: "profile", component:ProfileComponent},
   {path: "register", component:RegisterComponent},
   {path: "books", component:BooksComponent},
+<<<<<<< HEAD
+=======
+  //ユーザーがbooksページにアクセスする際にURLの一部として本のIDを指定できる
+  {path: "books/:bookid", component:BooksComponent},
+  {path: "add-book", component:AddBookComponent},
+  {path: "update-book", component:UpdateBookComponent},
+  {path: "login", component:LoginComponent},
+>>>>>>> dia6
   // {path: "temperature", component:TemperatureTestComponent}
 ];
 
